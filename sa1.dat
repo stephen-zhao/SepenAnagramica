@@ -1,0 +1,56 @@
+<data>
+<strings>
+	<!-- LICENSE STRINGS; pre(lcs) -->
+	<text id='lcs-cond'>SepenAnagramica v0.1.0
+Copyright (C) 2015 Stephen Zhao.
+This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you
+are welcome to redistribute it under certain conditions; type 'r' for details
+on licensing.</text>
+	<text id='lcs-credits'>SepenAnagramica v0.1.0
+SepenAnagramica is a word puzzle game involving anagrams with a console gui.
+Copyright (C) 2015 Stephen Zhao. Contact: mail@zhaostephen.com
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License in the form
+of the file 'LICENSE.TXT', located in the root directory of this program. If
+not, see http://www.gnu.org/licenses/.</text>
+	<!-- DEBUG STRINGS; pre(debug) -->
+	<text id='debug-warn'>!!! WARNING: DEBUG MODE IS ON !!!</text>
+	
+	<!-- APP MAIN STRINGS; pre(app) -->
+	<text id='app-initDone'>app initiated...</text>
+	<text id='app-welcome'>Welcome to SepenAnagramica.</text>
+	<text id='app-titleBorder'>  ===========================================================================  </text>
+	<text id='app-title'>  ===========================   SepenAnagramica   ===========================  </text>
+	<text id='app-menu1'>Select an option:</text>
+	<text id='app-menu2'>(P)lay  |  (C)ontrols  |  (S)ettings  |  C(r)edits  |  E(x)it</text>
+	<text id='app-done'>Exiting... app done.</text>
+	
+	<!-- GAME STRINGS; pre(game) -->
+	<text id='game-prompt0'>Letters: </text>
+	<text id='game-prompt1'>To exit, type "xgame"; Otherwise, type your guess:</text>
+	<text id='game-prompt2'>Would you like to play again? (y/n)</text>
+	<text id='game-promptTime'>Timer </text>
+	<text id='game-win'>You win!!!!</text>
+	<text id='game-lose'>Time's up! You lose!!</text>
+	<text id='game-answers'>Here are the answers: </text>
+	<text id='game-exit'>Exiting game..</text>
+	
+	<!-- UTIL STRINGS; pre(util) -->
+	<text id='util-input'>>>> </text>
+	
+	<!-- ERROR STRINGS; pre(err) -->
+	<text id='err-nyi'>ERROR: Not yet implemented</text>
+	<text id='err-in'>ERROR: Invalid Input</text>
+	<text id='err-gameHalt'>ERROR: Game halted</text>
+	<text id='err-noSuchCommand'>ERROR: No such command</text>
+</strings>
+</data>
