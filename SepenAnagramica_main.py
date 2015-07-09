@@ -273,7 +273,6 @@ def game():
         game_init()
         # Runs game loop
         n = gameLoop()
-        g_timer.join()
         # Processes exit conditions
         if n == GAME_QUIT:
             g_bIsDoneGame = True
@@ -301,6 +300,9 @@ def game():
                 g_bIsDoneGame = True
         else:
             print(TEXT['err-gameHalt'])
+            
+        # Rejoins timer thread
+        g_timer.join()
         
         
 #############################################################
