@@ -253,9 +253,10 @@ def controls():
 
 # Shows editable settings
 def settings():
-    print('Difficulty: ', CONFIG['difficulty'])
-    newDifficulty = input(TEXT['util-input'])
-    saveConfig()
+    print(TEXT['err-nyi'])
+    # print('Difficulty: ', CONFIG['difficulty'])
+    # newDifficulty = input(TEXT['util-input'])
+    # saveConfig()
     return 0
 
 # Shows credits and licensing info
