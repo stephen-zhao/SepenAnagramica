@@ -44,7 +44,17 @@ not, see http://www.gnu.org/licenses/.</text>
 	<text id='game-answers'>Here are the answers: </text>
 	<text id='game-exit'>Exiting game..</text>
 	
+	<!-- CONTROLS MENU STRINGS; pre(ctrl) -->
+	<text id='ctrl-title'>Here are the ~%~%~CONTROLS~%~%~ !!</text>
+	<text id='ctrl-typing'>  1. [=-=-=-= TYPE AWAY =-=-=-=] to input a guess.</text>
+	<text id='ctrl-enter'>  2. Hit [ ~~ ENTER ~~ ] to submit what you typed.</text>
+	<text id='ctrl-shuffle'>  3. Tap [ __--SPACE--__ ] and then [ ~~ ENTER ~~ ] to shuffle the displayed
+     letters.</text>
+	<text id='ctrl-end'>That's it! Now go play the game.</text>
+	
+	
 	<!-- UTIL STRINGS; pre(util) -->
+	<text id='util-pause'>Press ENTER key to continue... </text>
 	<text id='util-input'>>>> </text>
 	
 	<!-- ERROR STRINGS; pre(err) -->

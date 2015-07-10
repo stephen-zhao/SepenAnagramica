@@ -20,7 +20,8 @@
 #############################################################
 #========================= Includes =========================
 #############################################################
-import random
+import msvcrt
+import os
 from threading import Thread
 import time
 import xml.etree.ElementTree as ET
@@ -62,6 +63,9 @@ def isSubseq(x, y):
 
 def saveConfig():
     return 0
+
+def pause():
+    input(TEXT['util-pause'])
 
 #############################################################
 #======================= Timer Class ========================
@@ -248,7 +252,12 @@ def app_init():
 
 # Shows controls
 def controls():
-    print(TEXT['err-nyi'])
+    print(TEXT['ctrl-title'])
+    print(TEXT['ctrl-typing'])
+    print(TEXT['ctrl-enter'])
+    print(TEXT['ctrl-shuffle'])
+    print(TEXT['ctrl-end'])
+    pause()
     return 0
 
 # Shows editable settings
@@ -257,11 +266,13 @@ def settings():
     # print('Difficulty: ', CONFIG['difficulty'])
     # newDifficulty = input(TEXT['util-input'])
     # saveConfig()
+    pause()
     return 0
 
 # Shows credits and licensing info
 def credits_():
     print(TEXT['lcs-credits'])
+    pause()
     return 0
 
 # Game main function   
