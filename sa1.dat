@@ -1,12 +1,12 @@
 <data>
 <strings>
 	<!-- LICENSE STRINGS; pre(lcs) -->
-	<text id='lcs-cond'>SepenAnagramica v0.1.0
+	<text id='lcs-cond'>SepenAnagramica v0.1.1
 Copyright (C) 2015 Stephen Zhao.
 This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you
 are welcome to redistribute it under certain conditions; type 'r' for details
 on licensing.</text>
-	<text id='lcs-credits'>SepenAnagramica v0.1.0
+	<text id='lcs-credits'>SepenAnagramica v0.1.1
 SepenAnagramica is a word puzzle game involving anagrams with a console gui.
 Copyright (C) 2015 Stephen Zhao. Contact: mail@zhaostephen.com
 
@@ -20,8 +20,8 @@ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License in the form
-of the file 'LICENSE.TXT', located in the root directory of this program. If
-not, see http://www.gnu.org/licenses/.</text>
+of the file 'LICENSE', located in the root directory of this program. If not, 
+see http://www.gnu.org/licenses/.</text>
 	<!-- DEBUG STRINGS; pre(debug) -->
 	<text id='debug-warn'>!!! WARNING: DEBUG MODE IS ON !!!</text>
 	

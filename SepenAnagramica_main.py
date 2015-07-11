@@ -1,6 +1,6 @@
 # Stephen Zhao (www.zhaostephen.com)
-# SepenAnagramica v0.1.0
-# 2015-06-05
+# SepenAnagramica v0.1.1
+# 2015-07-10
 #
 # Copyright (C) 2015  Stephen Zhao
 #
@@ -20,8 +20,7 @@
 #############################################################
 #========================= Includes =========================
 #############################################################
-import msvcrt
-import os
+import random
 from threading import Thread
 import time
 import xml.etree.ElementTree as ET
@@ -30,7 +29,7 @@ import xml.etree.ElementTree as ET
 #======================== Global Var ========================
 #############################################################
 DATA_FILE = "sa1.dat"
-WORDS_FILE = "sa2.dat"
+WORDS_FILE = "sa0.dat"
 CONFIG_FILE = "sa3.dat"
 LICENSE_FILE = "LICENSE.TXT"
 README_FILE = "README.TXT"
@@ -228,8 +227,11 @@ def app_init():
     # in game. Only use store words less than 7 char long.
     with open(WORDS_FILE, 'r') as wordFile:
         for line in wordFile:
-            if len(line.strip()) <= 7:
-                g_lsWordsData.append(line.strip())
+            lsWords = list(map(lambda x: x[:-1], line.split()))
+            ##### DEBUG USE: print(lsWords[0:10])
+            for word in lsWords:
+                if len(word) <= 7:
+                    g_lsWordsData.append(word)
     # Sort words by 1. asc length -> 2. asc value.
     g_lsWordsData = sorted(g_lsWordsData)
     g_lsWordsData = sorted(g_lsWordsData, key=lambda x: len(x))
