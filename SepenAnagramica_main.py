@@ -41,6 +41,7 @@ CONFIG = {}
     
 g_bIsDone = False
 g_bIsDoneGame = False
+g_bTriggerTimerStop = False
 g_timer = 0
 g_lsWordsData = []
 g_lsbGameData = []
@@ -72,6 +73,7 @@ def pause():
 class Timer(Thread):
     global g_bIsDoneGame
     global g_bDebugMode
+    global g_bTriggerTimerStop
     def __init__(self,val):
         Thread.__init__(self)
         self.val = val
@@ -81,7 +83,7 @@ class Timer(Thread):
         if g_bDebugMode:
             print("Timer thread is starting")
         startTime = int(time.clock())*1000
-        while(self.nTime > 0 and not g_bIsDoneGame):
+        while(self.nTime > 0 and not g_bTriggerTimerStop):
             nTime = 120000 - (int(time.clock())*1000 - startTime)
             if nTime > 0:
                 self.nTime = nTime
@@ -148,6 +150,7 @@ def game_init():
     global g_lsWordsData
     global g_lsbGameData
     global g_lchGameLetters
+    global g_bTriggerTimerStop
     diffToWLen = {1:4,2:5,3:6,4:7}
     srcWord = getRandomWord(diffToWLen[int(CONFIG['difficulty'])],
                             g_lsWordsData)
@@ -159,6 +162,7 @@ def game_init():
     g_lchGameLetters = list(srcWord)
     random.shuffle(g_lchGameLetters)
     # Instantiates and runs timer for game
+    g_bTriggerTimerStop = False
     g_timer = Timer(0)
     g_timer.setName('TimerThread')
     g_timer.start()
@@ -280,7 +284,9 @@ def credits_():
 # Game main function   
 def game():
     global g_bIsDoneGame
+    global g_bTriggerTimerStop
     g_bIsDoneGame = False
+    
     while(not g_bIsDoneGame):
         # Inits game
         game_init()
@@ -288,8 +294,10 @@ def game():
         n = gameLoop()
         # Processes exit conditions
         if n == GAME_QUIT:
+            g_bTriggerTimerStop = True
             g_bIsDoneGame = True
         elif n == GAME_WIN:
+            g_bTriggerTimerStop = True
             print(TEXT['game-win'])
             print(TEXT['game-prompt2'])
             sIn = input(">>> ")
@@ -300,6 +308,7 @@ def game():
             if sIn in 'Nn':
                 g_bIsDoneGame = True
         elif n == GAME_LOSE:
+            g_bTriggerTimerStop = True
             print(TEXT['game-lose'])
             print(TEXT['game-answers'])
             print(ltos([word[0] for word in g_lsbGameData]))
